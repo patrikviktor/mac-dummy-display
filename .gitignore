@@ -1,0 +1,11 @@
+# Compiled binaries
+dummy_display
+dummy_display_menu
+*.app/
+/DummyDisplay.app/
+
+# macOS system files
+.DS_Store
+
+# User configuration / logs
+*.log
