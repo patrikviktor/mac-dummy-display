@@ -85,9 +85,12 @@ func createVirtualDisplay() {
     ]
     
     var modes: [CGVirtualDisplayMode] = []
+    let refreshRates: [Double] = [60.0, 90.0, 120.0]
     for res in resolutions {
-        let mode = CGVirtualDisplayMode(width: res.0, height: res.1, refreshRate: 60.0)
-        modes.append(mode)
+        for rate in refreshRates {
+            let mode = CGVirtualDisplayMode(width: res.0, height: res.1, refreshRate: rate)
+            modes.append(mode)
+        }
     }
     
     let settings = CGVirtualDisplaySettings()
